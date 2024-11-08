@@ -30,7 +30,7 @@ const typeDefs = gql`
         id: ID!
         first_name: String
         last_name: String
-        email: String
+        email(masked: Boolean = true): String
         gender: Gender
         friends: [String]
         work_state: WorkState
@@ -83,6 +83,59 @@ const resolvers = {
                 message: result ? "Success" : "User cannot be found with the id given...",
                 errors: null
             }
+        }
+    },
+    User: {
+        email: ({ email }, { masked }, context, info)=>{
+            console.log('User => email => email ', email);
+            console.log('User => email => masked ', masked);
+            if (masked) {
+                let result = [];
+                const initMatches = email.match(/(\w{3})[\w.-]+@([\w.]+\w)/);
+                // console.log('initMatches', initMatches);
+                if (initMatches !== null) {
+                    result = [
+                        initMatches[1]
+                    ];
+                } else {
+                    return email.split('@').map((p, index)=>index===0?p.replace(/\S/g,'*'):'@'+p);
+                }
+                
+                const midMatches = initMatches[0].split('@')[0].replace(initMatches[1],'').match(/(\S{3})[\w.-]+/);
+                if (midMatches !== null) {
+                    // console.log('midMatches is not NULL', midMatches);
+                    result = [
+                        ...result,
+                        midMatches[1].replace(/\S/g,"*")
+                    ];
+
+                    const lastMatches = midMatches[0].replace(midMatches[1],'').match(/^(.*)..$/);
+                    // console.log('lastMatches is not NULL', lastMatches);
+                    if (lastMatches !== null) {
+                        result = [
+                            ...result,
+                            lastMatches[1].replace(/\S/g,"*"),
+                            lastMatches[0].replace(lastMatches[1], ""),
+                        ];
+                    }
+                } else {
+                    result = [
+                        ...result,
+                        initMatches[0].replace(initMatches[1],'').replace('@'+initMatches[2],'').replace(/\S/g,'*')
+                    ];
+                }
+                return [ ...result, '@', initMatches[2] ].join('');
+
+                // return [
+                //     initMatches[1],
+                //     midMatches[1].replace(/\S/g,"*"),
+                //     lastMatches[1].replace(/\S/g,"*"),
+                //     lastMatches[0].replace(lastMatches[1], ""),
+                //     '@',
+                //     initMatches[0].split('@')[1]
+                // ].join('');
+            }
+            return email;
         }
     }
 };
