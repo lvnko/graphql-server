@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/lvnko/graphql-server#readme",
   "dependencies": {
+    "apollo-server": "^3.13.0",
     "graphql": "^15.9.0"
   }
 }
