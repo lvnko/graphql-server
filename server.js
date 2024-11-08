@@ -16,6 +16,17 @@ const stubUser = {
     updated_at: new Date()
 };
 
+const errorReturn = (status, message) => {
+    return {
+        status: status,
+        message: message
+    }
+}
+
+const unAuthReturn = (message = 'You are unauthorized!') => {
+    return errorReturn(401, message);
+}
+
 const typeDefs = gql`
     enum WorkState {
         STOP
@@ -35,8 +46,14 @@ const typeDefs = gql`
         friends: [String]
         work_state: WorkState
     }
+    type QueryUserPayload {
+        status: String
+        payload: User
+        message: String
+        errors: [String]
+    }
     type Query {
-        user: User
+        user: QueryUserPayload
     }
     input UpdateUserInputType {
         id: ID!
@@ -61,7 +78,14 @@ const typeDefs = gql`
 const resolvers = {
     Query: {
         user: (root, args, context, info)=>{
-            return stubUser;
+            const {auth} = context;
+            if (!auth) return unAuthReturn('Yor are unauthorized to make this query!');
+            return {
+                payload: stubUser,
+                status: 200,
+                message: "Success",
+                errors: null
+            }
         }
     },
     Mutation: {
@@ -87,8 +111,8 @@ const resolvers = {
     },
     User: {
         email: ({ email }, { masked }, context, info)=>{
-            console.log('User => email => email ', email);
-            console.log('User => email => masked ', masked);
+            // console.log('User => email => email ', email);
+            // console.log('User => email => masked ', masked);
             if (masked) {
                 let result = [];
                 const initMatches = email.match(/(\w{3})[\w.-]+@([\w.]+\w)/);
@@ -142,7 +166,12 @@ const resolvers = {
 
 const server = new ApolloServer({
     typeDefs,
-    resolvers
+    resolvers,
+    context: ()=> {
+        return {
+            auth: true
+        };
+    }
 });
 
 server.listen(8891, ()=>{
