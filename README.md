@@ -17,11 +17,11 @@ npm run dev
         3. Subscription 訂閱：當數據發生變更，便推送最新消息
         ***
         以下例子為一個簡單的查詢 (Query)  
-            ```sdl
-            query {
-                user { id }
-            }
-            ```
+        ```sdl
+        query {
+            user { id }
+        }
+        ```
     - 物件類型和標準類型 Object Type & Scalar Type
 - Fragment 的使用場景、概念及實例 :
     [Handbook for using fragments in GraphQL](https://developer.ibm.com/articles/awb-handbook-for-using-fragments-in-graphql/)  
