@@ -227,4 +227,3 @@ graphql(
 }).catch(err=>{
     console.error(err);
 });
-// console.log(Schema.getQueryType());
