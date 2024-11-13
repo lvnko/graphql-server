@@ -40,7 +40,7 @@ npm run dev
     - 建立 Date Scalar Type 及其 Resolvers 實作 :
         [實作 Custom Scalar Type (Date Scalar Type)](https://ithelp.ithome.com.tw/articles/10206366)
 ## 其他有用資源
-- [AST Explorernpm](https://astexplorer.net/)
+- [AST Explorer](https://astexplorer.net/)
 - Reading : [GraphQLSchema vs. buildSchema vs. makeExecutableSchema](https://stackoverflow.com/questions/53984094/notable-differences-between-buildschema-and-graphqlschema)
 - Example : [buildSchema with SDL while defining resolver separately](https://github.com/IvanGoncharov/swapi-demo/blob/master/src/index.ts)
 - 官方教程 : [GraphQL tutorials and resources](https://www.apollographql.com/tutorials/browse/)
