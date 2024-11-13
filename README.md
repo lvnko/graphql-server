@@ -25,6 +25,14 @@ npm run dev
     - 物件類型和標準類型 Object Type & Scalar Type
         1. **Object Type** : 用戶可在 schema 中自定義的 type，透過加入不同的 field (欄位) 來封裝成獨立的資料型別，用以配合不同的操作 (e.g. Query 或 Mutation)
         2. **Scalar Type** : GraphQL 中內置的標準型別 (String、Int、Float、Boolean、ID)，通常用來定義 Object Type 裡的 field 的型別，搭配尾端的 ! 以代表該欄位不能為 Null；此外用戶也可以自我定義內建以外的 Custom Scalar Type，詳細用法可參考進階閱讀。
+        ***
+        以下例子演示如何在 Schema 中定義 ``User`` 著個 Object Type，其中 ``name`` 的欄位型別為 ``String`` 字串且不能為空白  
+        ```sdl
+        type User {
+            name: String!
+            age: Int
+        }
+        ```
 - 進階閱讀：
     - Fragment 的使用場景、概念及實例 :
         [Handbook for using fragments in GraphQL](https://developer.ibm.com/articles/awb-handbook-for-using-fragments-in-graphql/)  
