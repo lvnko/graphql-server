@@ -10,7 +10,7 @@ npm run dev
 
 ## GraphQL 學習資源
 - GraphQL 的概念介紹與使用方法 :
-    [GraphQL 入門看這篇就夠了](https://www.freecodecamp.org/chinese/news/a-detailed-guide-to-graphql/)
+    [GraphQL 入門看這篇就夠了](https://www.freecodecamp.org/chinese/news/a-detailed-guide-to-graphql/), [介紹 GraphQL 的 Schema,type,field](https://ithelp.ithome.com.tw/articles/10285159)
     - 操作類型 Operation Type
         1. **Query** 查詢：獲取數據庫資料，例如查找，CRUD 中的 R
         2. **Mutation** 變更：對數據庫進行變更，比如增加、刪除、修改，CRUD 中的 CUD
