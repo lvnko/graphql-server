@@ -44,3 +44,4 @@ npm run dev
 - Reading : [GraphQLSchema vs. buildSchema vs. makeExecutableSchema](https://stackoverflow.com/questions/53984094/notable-differences-between-buildschema-and-graphqlschema)
 - Example : [buildSchema with SDL while defining resolver separately](https://github.com/IvanGoncharov/swapi-demo/blob/master/src/index.ts)
 - 官方教程 : [GraphQL tutorials and resources](https://www.apollographql.com/tutorials/browse/)
+- 官方使用手冊 : [Introduction to GraphQL...](https://graphql.org/learn/)
