@@ -23,7 +23,7 @@ npm run dev
         ```
     - 物件類型和標準類型 Object Type & Scalar Type
 - Fragment 的使用場景、概念及實例 :
-    [Handbook for using fragments in GraphQL](https://developer.ibm.com/articles/awb-handbook-for-using-fragments-in-graphql/)
+    [Handbook for using fragments in GraphQL](https://developer.ibm.com/articles/awb-handbook-for-using-fragments-in-graphql/)  
     在 IBM 官網上的技術文章，其中談及 framgment、interface、alias 與 union 的實例。
 ## 其他有用資源
 - [AST Explorernpm](https://astexplorer.net/)
