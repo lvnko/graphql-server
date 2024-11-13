@@ -14,8 +14,9 @@ npm run dev
     - 操作類型 Operation Type
         1. Query 查詢：獲取數據庫資料，例如查找，CRUD 中的 R
         2. Mutation 變更：對數據庫進行變更，比如增加、刪除、修改，CRUD 中的 CUD
-        3. Subscription 訂閱：當數據發生變更，便推送最新消息  
-        以下例子為一個簡單的查詢 (Query)<br>
+        3. Subscription 訂閱：當數據發生變更，便推送最新消息
+        ***
+        以下例子為一個簡單的查詢 (Query)  
             ```sdl
             query {
                 user { id }
