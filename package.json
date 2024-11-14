@@ -1,7 +1,7 @@
 {
   "name": "graphql-server",
   "version": "1.0.0",
-  "description": "Week #006",
+  "description": "Week #007 & Week #008",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

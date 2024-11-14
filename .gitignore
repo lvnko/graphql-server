@@ -1,1 +1,11 @@
-node_modules
+/node_modules
+
+# debug
+/logs
+
+# misc
+.DS_Store
+*.pem
+
+# local env files
+.env*.local

@@ -1,3 +1,4 @@
+# Week #007 + Week #008
 ## 專案啟動步驟
 1. 安裝依賴模組
 ```node
@@ -40,8 +41,11 @@ npm run dev
     - 建立 Date Scalar Type 及其 Resolvers 實作 :
         [實作 Custom Scalar Type (Date Scalar Type)](https://ithelp.ithome.com.tw/articles/10206366)
 ## 其他有用資源
-- [AST Explorer](https://astexplorer.net/)
-- Reading : [GraphQLSchema vs. buildSchema vs. makeExecutableSchema](https://stackoverflow.com/questions/53984094/notable-differences-between-buildschema-and-graphqlschema)
-- Example : [buildSchema with SDL while defining resolver separately](https://github.com/IvanGoncharov/swapi-demo/blob/master/src/index.ts)
-- 官方教程 : [GraphQL tutorials and resources](https://www.apollographql.com/tutorials/browse/)
-- 官方使用手冊 : [Introduction to GraphQL...](https://graphql.org/learn/)
+- GraphQL
+    - [AST Explorer](https://astexplorer.net/)
+    - Reading : [GraphQLSchema vs. buildSchema vs. makeExecutableSchema](https://stackoverflow.com/questions/53984094/notable-differences-between-buildschema-and-graphqlschema)
+    - Example : [buildSchema with SDL while defining resolver separately](https://github.com/IvanGoncharov/swapi-demo/blob/master/src/index.ts)
+    - 官方教程 : [GraphQL tutorials and resources](https://www.apollographql.com/tutorials/browse/)
+    - 官方使用手冊 : [Introduction to GraphQL...](https://graphql.org/learn/)
+- MongoDB [[官網](https://www.mongodb.com/)]
+    - 使用手冊 (8.0 current) [What is MongoDB?](https://www.mongodb.com/docs/manual/)
