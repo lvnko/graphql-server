@@ -1,9 +1,10 @@
+# dependencies
 /node_modules
 
 # debug
 /logs
-/data/db/journal/*
-/data/db/diagnostic.data/*
+/data/db/journal
+/data/db/diagnostic.data
 
 # misc
 .DS_Store
