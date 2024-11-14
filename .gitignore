@@ -3,6 +3,7 @@
 
 # debug
 /logs
+data/db
 data/db/journal
 data/db/diagnostic.data
 data/db/diagnostic.data/metrics.interim
