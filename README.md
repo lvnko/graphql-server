@@ -40,6 +40,7 @@ npm run dev
         在 IBM 官網上的技術文章，其中談及 framgment、interface、alias 與 union 的實例。
     - 建立 Date Scalar Type 及其 Resolvers 實作 :
         [實作 Custom Scalar Type (Date Scalar Type)](https://ithelp.ithome.com.tw/articles/10206366)
+## Mongo Shell 學習筆記 [ [<img width="17" hieght="17" style="vertical-align: middle;" src="https://cdn-icons-png.flaticon.com/512/282/282100.png"/> 連結](./notes/mongodb-shell.md) ]
 ## 其他有用資源
 - GraphQL
     - [AST Explorer](https://astexplorer.net/)

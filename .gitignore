@@ -2,6 +2,8 @@
 
 # debug
 /logs
+/data/db/journal/*
+/data/db/diagnostic.data/*
 
 # misc
 .DS_Store
