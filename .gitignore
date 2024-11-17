@@ -3,7 +3,6 @@
 
 # debug
 /logs
-data/db/*
 
 # misc
 .DS_Store
