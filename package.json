@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lvnko/graphql-server.git"
+    "url": "https://github.com/lvnko/graphql-server.git"
   },
   "author": "",
   "license": "ISC",
